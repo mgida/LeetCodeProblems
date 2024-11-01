@@ -54,6 +54,40 @@ fun isPalindrome(head: ListNode?): Boolean {
     return true
 }
 
+fun isPalindromeUsingArray(head: ListNode?): Boolean {
+    /** another solution is to save the values of each node inside an array,
+     * then using two pointers from the start and end of the array, compare values
+     * time is O(n)
+     * memory is O(n) since we are using extra space
+     * */
+
+    var current = head
+    val values = mutableListOf<Int>()
+    var index = 0
+
+    while (current != null) {
+        values.add( current.`val`)
+        index++
+        current = current.next
+    }
+
+    var left = 0
+    var right = values.size - 1
+
+
+    while (left < right) {
+        if (values[left] != values[right]) {
+            return false
+        } else {
+            left++
+            right--
+        }
+    }
+
+    return true
+}
+
+
 fun reverseSecondHalf(head: ListNode?): ListNode? {
     var prev: ListNode? = null
     var current = head
