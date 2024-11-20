@@ -1,9 +1,8 @@
 package tree.general_tree.general_tree_operations
 
 import tree.general_tree.TreeNode
-import java.util.LinkedList
-import java.util.Queue
-import java.util.Stack
+import java.util.*
+import kotlin.collections.ArrayDeque
 
 
 fun main() {
