@@ -30,8 +30,8 @@ fun main() {
 }
 
 /**
- * start at root, for each child recursively calculate its depth.
- * depth of current = 1 + max depth of its children
+ * start at root, If the node has no children, it's a leaf return 1.
+ * Otherwise, recursively count the leaf nodes for all its children.
  **/
 fun countLeafNodesRecursively(root: TreeNode<String>?): Int {
     if (root == null) return 0
